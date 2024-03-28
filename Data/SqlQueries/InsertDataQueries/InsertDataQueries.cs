@@ -1,10 +1,4 @@
-﻿using Data.Models;
-using System.Collections.Generic;
-using System.Net;
-using System.Numerics;
-using System.Xml.Linq;
-
-namespace Data.SqlQueries.InsertDataQueries
+﻿namespace Data.SqlQueries.InsertDataQueries
 {
     internal class InsertDataQueries
     {
@@ -97,5 +91,8 @@ namespace Data.SqlQueries.InsertDataQueries
         //    (8, 8, '2024-01-01', 500.00, 'Premium Payment'),
         //    (9, 9, '2023-05-01', 4000.00, 'Premium Payment'),
         //    (10, 10, '2022-10-01', 3000.00, 'Claim Payment');
+
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
     }
 }
