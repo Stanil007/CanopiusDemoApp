@@ -43,6 +43,8 @@ namespace Data.Repositories
                 claimToUpdate.ClaimAmount = claim.ClaimAmount;
                 claimToUpdate.ClaimStatus = claim.ClaimStatus;
                 claimToUpdate.DateOfClaim = claim.DateOfClaim;
+                
+                context.SaveChanges();
             }
             else
             {
