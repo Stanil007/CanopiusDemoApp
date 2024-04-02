@@ -30,7 +30,7 @@ namespace CanopiusDemoApp.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetById(int id)
+        public IActionResult Details(int id)
         {
             try
             {

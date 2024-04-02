@@ -26,7 +26,7 @@ namespace CanopiusDemoApp.Controllers
             }
         }
 
-        public IActionResult GetById(int id)
+        public IActionResult Details(int id)
         {
             try
             {
