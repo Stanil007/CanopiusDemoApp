@@ -63,5 +63,13 @@ namespace Data.Repositories
                 context.SaveChanges();
             }
         }
+
+        public List<int> GetAllCustomerId()
+        {
+            return context.Customers
+                .AsNoTracking()
+                .Select(c => c.Id)
+                .ToList();
+        }
     }
 }
