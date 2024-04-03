@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\CanopiusDemoApp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\marst\\source\\repos\\CanopiusDemoApp\\CanopiusDemoApp\\wwwroot\\1678892131758.jpg",
+      "PackagePath": "staticwebassets\\1678892131758.jpg"
+    },
+    {
       "Id": "C:\\Users\\marst\\source\\repos\\CanopiusDemoApp\\CanopiusDemoApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

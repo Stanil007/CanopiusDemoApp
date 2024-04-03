@@ -15,6 +15,7 @@ namespace Data.Repositories
         public List<Policy> GetAll()
         {
             return context.Policies
+                .Include(p => p.Customer)
                 .AsNoTracking()
                 .ToList();
         }

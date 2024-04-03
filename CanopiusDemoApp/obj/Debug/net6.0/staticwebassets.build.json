@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Am73LKGmCU/1mkZ8gXFgJ94Vd4B+ub+Q9GI3WtJ9klo=",
+  "Hash": "uhpap7l9yPEsDxoPxEhMdP4R08/Dtn2vbvINafqW/D8=",
   "Source": "CanopiusDemoApp",
   "BasePath": "_content/CanopiusDemoApp",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\marst\\source\\repos\\CanopiusDemoApp\\CanopiusDemoApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CanopiusDemoApp.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\marst\\source\\repos\\CanopiusDemoApp\\CanopiusDemoApp\\wwwroot\\1678892131758.jpg",
+      "SourceId": "CanopiusDemoApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\marst\\source\\repos\\CanopiusDemoApp\\CanopiusDemoApp\\wwwroot\\",
+      "BasePath": "_content/CanopiusDemoApp",
+      "RelativePath": "1678892131758.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\1678892131758.jpg"
     },
     {
       "Identity": "C:\\Users\\marst\\source\\repos\\CanopiusDemoApp\\CanopiusDemoApp\\wwwroot\\css\\site.css",
