@@ -54,12 +54,15 @@ namespace CanopiusDemoApp.Controllers
         [HttpGet]
         public IActionResult Add()
         {
-            var allPolicies = policyRepository.GetAll();
-            var allClaims = claimRepository.GetAll();
 
-            ViewBag.Policies = new SelectList(allPolicies, "Id", "PolicyType");
-            ViewBag.Claims = new SelectList(allClaims, "Id", "ClaimAmount"); 
-
+            ViewBag.Policies = policyRepository.GetAll()
+                                               .Where(p => claimRepository.GetAll().Any(c => c.PolicyId == p.Id && c.ClaimStatus == "Approved"))
+                                               .Select(p => new SelectListItem
+                                               {
+                                                   Value = p.Id.ToString(),
+                                                   Text = $"{p.Id} - {p.PolicyType}"
+                                               })
+                                               .ToList();
             return View();
         }
 
@@ -69,6 +72,7 @@ namespace CanopiusDemoApp.Controllers
             try
             {
                 paymentRepository.Add(payment);
+
                 return RedirectToAction("All");
             }
             catch (Exception)
@@ -116,6 +120,21 @@ namespace CanopiusDemoApp.Controllers
             {
                 throw new Exception($"An error occurred while deleting payment with id {id}");
             }
+        }
+
+        [HttpGet]
+        public JsonResult GetClaimsByPolicy(int policyId)
+        {
+            var claims = claimRepository.GetAll()
+                .Where(c => c.ClaimStatus == "Approved" && c.PolicyId == policyId)
+                .Select(c => new SelectListItem
+                {
+                    Value = c.Id.ToString(),
+                    Text = $"{c.Id} - {c.ClaimStatus}"
+                })
+                .ToList();
+
+            return Json(claims);
         }
 
     }
