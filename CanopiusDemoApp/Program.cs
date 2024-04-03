@@ -18,8 +18,16 @@ namespace CanopiusDemoApp
 
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
-                .AddEntityFrameworkStores<Data.AppContext>();
+            builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 3;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+            })
+             .AddEntityFrameworkStores<Data.AppContext>();
 
             builder.Services.AddScoped<Data.Repositories.ClaimRepository>();
             builder.Services.AddScoped<Data.Repositories.CustomerRepository>();
