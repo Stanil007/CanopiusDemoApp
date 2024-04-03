@@ -1,6 +1,7 @@
 ﻿using Data.Models;
 using Data.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CanopiusDemoApp.Controllers
 {
@@ -8,10 +9,12 @@ namespace CanopiusDemoApp.Controllers
     {
 
         private readonly PolicyRepository policyRepository;
+        private readonly CustomerRepository customerRepository;
 
-        public PolicyController(PolicyRepository _policyRepository)
+        public PolicyController(PolicyRepository _policyRepository, CustomerRepository _customerRepository)
         {
              policyRepository = _policyRepository;
+            customerRepository = _customerRepository;
         }
 
 
@@ -46,6 +49,10 @@ namespace CanopiusDemoApp.Controllers
         [HttpGet]
         public IActionResult Add()
         {
+            var allCustomers = customerRepository.GetAll();
+
+            ViewBag.Customers = new SelectList(allCustomers, "Id", "Name");
+
             return View();
         }
 

@@ -12,3 +12,4 @@ C:\Users\marst\source\repos\CanopiusDemoApp\Data\obj\Debug\net6.0\refint\Data.dl
 C:\Users\marst\source\repos\CanopiusDemoApp\Data\obj\Debug\net6.0\Data.pdb
 C:\Users\marst\source\repos\CanopiusDemoApp\Data\obj\Debug\net6.0\Data.genruntimeconfig.cache
 C:\Users\marst\source\repos\CanopiusDemoApp\Data\obj\Debug\net6.0\ref\Data.dll
+C:\Users\marst\source\repos\CanopiusDemoApp\Data\obj\Debug\net6.0\Data.sourcelink.json

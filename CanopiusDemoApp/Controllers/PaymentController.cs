@@ -1,6 +1,7 @@
 ﻿using Data.Models;
 using Data.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CanopiusDemoApp.Controllers
 {
@@ -8,10 +9,17 @@ namespace CanopiusDemoApp.Controllers
     {
 
         private readonly PaymentRepository paymentRepository;
+        private readonly PolicyRepository policyRepository;
+        private readonly ClaimRepository claimRepository;
 
-        public PaymentController(PaymentRepository _paymentRepository)
+        public PaymentController(PaymentRepository _paymentRepository,
+                                 PolicyRepository _policyRepository, 
+                                 ClaimRepository _claimRepository)
         {
             paymentRepository = _paymentRepository;
+            policyRepository = _policyRepository;
+            claimRepository = _claimRepository; 
+
         }
 
         [HttpGet]   
@@ -46,6 +54,12 @@ namespace CanopiusDemoApp.Controllers
         [HttpGet]
         public IActionResult Add()
         {
+            var allPolicies = policyRepository.GetAll();
+            var allClaims = claimRepository.GetAll();
+
+            ViewBag.Policies = new SelectList(allPolicies, "Id", "PolicyType");
+            ViewBag.Claims = new SelectList(allClaims, "Id", "ClaimAmount"); 
+
             return View();
         }
 

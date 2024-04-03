@@ -8,7 +8,6 @@ C:\Users\marst\source\repos\CanopiusDemoApp\CanopiusDemoApp\obj\Debug\net6.0\Can
 C:\Users\marst\source\repos\CanopiusDemoApp\CanopiusDemoApp\obj\Debug\net6.0\CanopiusDemoApp.RazorAssemblyInfo.cache
 C:\Users\marst\source\repos\CanopiusDemoApp\CanopiusDemoApp\obj\Debug\net6.0\CanopiusDemoApp.RazorAssemblyInfo.cs
 C:\Users\marst\source\repos\CanopiusDemoApp\CanopiusDemoApp\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\marst\source\repos\CanopiusDemoApp\CanopiusDemoApp\bin\Debug\net6.0\appsettings.json
 C:\Users\marst\source\repos\CanopiusDemoApp\CanopiusDemoApp\bin\Debug\net6.0\CanopiusDemoApp.staticwebassets.runtime.json
 C:\Users\marst\source\repos\CanopiusDemoApp\CanopiusDemoApp\bin\Debug\net6.0\CanopiusDemoApp.exe
 C:\Users\marst\source\repos\CanopiusDemoApp\CanopiusDemoApp\bin\Debug\net6.0\CanopiusDemoApp.deps.json
@@ -77,3 +76,4 @@ C:\Users\marst\source\repos\CanopiusDemoApp\CanopiusDemoApp\obj\Debug\net6.0\ref
 C:\Users\marst\source\repos\CanopiusDemoApp\CanopiusDemoApp\obj\Debug\net6.0\CanopiusDemoApp.pdb
 C:\Users\marst\source\repos\CanopiusDemoApp\CanopiusDemoApp\obj\Debug\net6.0\CanopiusDemoApp.genruntimeconfig.cache
 C:\Users\marst\source\repos\CanopiusDemoApp\CanopiusDemoApp\obj\Debug\net6.0\ref\CanopiusDemoApp.dll
+C:\Users\marst\source\repos\CanopiusDemoApp\CanopiusDemoApp\obj\Debug\net6.0\CanopiusDemoApp.sourcelink.json

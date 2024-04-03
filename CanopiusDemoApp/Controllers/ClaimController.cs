@@ -1,16 +1,20 @@
 ﻿using Data.Models;
 using Data.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CanopiusDemoApp.Controllers
 {
     public class ClaimController : Controller
     {
         private readonly ClaimRepository claimRepository;
+        private readonly PolicyRepository policyRepository;
 
-        public ClaimController(ClaimRepository _claimRepository)
+        public ClaimController(ClaimRepository _claimRepository, PolicyRepository _policyRepository)
         {
             claimRepository = _claimRepository;
+            policyRepository = _policyRepository;
+
         }
 
         [HttpGet]
@@ -44,6 +48,11 @@ namespace CanopiusDemoApp.Controllers
         [HttpGet]
         public IActionResult Add()
         {
+            var policiesWithoutClaims = policyRepository.GetAll()
+                                                            .Where(p => !claimRepository.GetAll().Any(c => c.PolicyId == p.Id))
+                                                            .ToList();
+            ViewBag.PoliciesWithoutClaims = new SelectList(policiesWithoutClaims, "Id", "PolicyType");
+
             return View();
         }
 
